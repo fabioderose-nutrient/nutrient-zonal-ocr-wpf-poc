@@ -1,0 +1,25 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <UseWPF>true</UseWPF>
+    <!-- System.Windows.Forms.ColorDialog is used for the annotation colours. -->
+    <UseWindowsForms>true</UseWindowsForms>
+    <RootNamespace>ZonalOcrViewer</RootNamespace>
+    <AssemblyName>ZonalOcrViewer</AssemblyName>
+    <Nullable>disable</Nullable>
+    <PlatformTarget>x64</PlatformTarget>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- GdPicture.NET 14.3 includes the WPF viewer controls (GdViewer, ThumbnailEx, BookmarksTree,
+         AnnotationEditor) and the Windows runtimes. From 14.4 they ship in the GdPicture.WPF package. -->
+    <PackageReference Include="GdPicture" Version="14.3.21" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="resources\*.png" />
+  </ItemGroup>
+
+</Project>
